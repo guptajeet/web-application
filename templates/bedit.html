@@ -1,0 +1,38 @@
+{% extends "base.html "%}
+{% block mbookactive %}active{% endblock mbookactive %}
+{% block title %}Books{% endblock title %}
+{% block body %}
+<div class="container">
+    <h2 class="text-center my3">Update Details </h2>
+    <br>
+    <form method="POST" class="post-form" action="/update/{{books.bname}}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="bname"> Book Name</label>
+            <input type="text" class="form-control" name="bname" id="bname" placeholder="Book Name"
+                   value="{{ books.bname }}"/>
+        </div>
+
+        <div class=" form-group">
+            <label for="bdesc">Short Description</label>
+            <input type="text" class="form-control" name="bdesc" id="bdesc" placeholder="About Book"
+                   value="{{ books.bdesc }}"/>
+        </div>
+
+        <div class=" form-group">
+            <label for="bauthor">Author Name</label>
+            <input type="text" class="form-control" name="bauthor" id="bauthor" placeholder="Author"
+                   value="{{ books.bauthor }}"/>
+        </div>
+        <div class=" form-group">
+            <label for="emailid">Email Address</label>
+            <input type="email" class="form-control" name="emailid" id="emailid" placeholder="abc@gmail.com"
+                   value="{{ books.emailid }}"/>
+        </div>
+
+        <button type="submit" class="btn btn-success">Update</button>
+
+    </form>
+</div>
+
+{% endblock body %}

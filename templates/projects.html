@@ -1,0 +1,66 @@
+{% extends "base.html "%}
+{% block projectsactive %}active{% endblock projectsactive %}
+{% block title %}Project{% endblock title %}
+{% block body %}
+
+
+<div class="container my-3">
+    <h2 class="text-center my-3 py-3">My projects</h2>
+    <div class="row row-cols-1 row-cols-md-3">
+        <div class="col-mb-4">
+            <div class="card" style="width: 18rem;">
+                <img src="https://source.unsplash.com/500x300/?laptop,code" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">First Web Development Project</h5>
+                    <p class="card-text">This is my First Project</p>
+                    <a href="/wdp1/" class="btn btn-primary">Click to know more</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-mb-4">
+            <div class="card" style="width: 18rem;">
+                <img src="https://source.unsplash.com/500x300/?html,computer" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Second Web Development Project</h5>
+                    <p class="card-text">This is my Second Project</p>
+                    <a href="/wdp1/" class="btn btn-primary">Click to know more</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-mb-4">
+            <div class="card" style="width: 18rem;">
+                <img src="https://source.unsplash.com/500x300/?laptop,technology" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Third Web Development Project</h5>
+                    <p class="card-text">This is my Third Project</p>
+                    <a href="/wdp1/" class="btn btn-primary">Click to know more</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-mb-4 my-5">
+            <div class="card" style="width: 18rem;">
+                <img src="https://source.unsplash.com/500x300/?javascript,coding" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Final Web Development Project</h5>
+                    <p class="card-text">This is my Final Project</p>
+                    <a href="/wdp1/" class="btn btn-primary">Click to know more</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer class="footer bg-dark position-relative fixed-bottom">
+        <div class="container">
+            <p class="text-center text-light py-1 my-0">Copyright 2020 | All rights Reserved</p>
+        </div>
+</footer>
+
+{% endblock body %}
+

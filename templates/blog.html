@@ -1,0 +1,40 @@
+{% extends "base.html "%}
+{% block blogactive %}active{% endblock blogactive %}
+{% block title %}Blog{% endblock title %}
+{% block body %}
+<div class="container">
+    <h1 class="my-3">Welcome to my Blog</h1>
+    {% for blog in blogs %}
+    <div class="my-2">
+        <h3 class="text-dark"><a href="/blogpost/{{blog.slug}}" class="text-dark"> {{blog.title}}</a></h3>
+        <div class="my-2">
+            {{blog.desc|slice:245}}
+        </div>
+        <a href="/blogpost/{{blog.slug}}" class="text-dark">
+            <button type="button" class="btn btn-secondary">Read more....</button>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% if prev %}
+<button class="btn btn-light"><a class="text-dark"  href="/blog?page={{prev}}">&laquo; Previous</a></button>
+{% else %}
+<button class="btn btn-light"><a class="text-dark" href="#">&laquo; Previous</a></button>
+{% endif %}
+
+{% if nxt %}
+<button class="btn btn-light float-right"><a class="text-dark" href="/blog?page={{nxt}}">Next &raquo; </a></button>
+{% else %}
+<button class="btn btn-light float-right"><a class="text-dark" href="#">Next &raquo;</a></button>
+{% endif%}
+
+
+
+<footer class="footer bg-dark position-absolute fixed-bottom">
+    <div class="container">
+        <p class="text-center text-light py-1 my-0">Copyright 2020 | All rights Reserved</p>
+    </div>
+</footer>
+{% endblock body %}
+

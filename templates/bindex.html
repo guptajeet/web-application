@@ -1,0 +1,47 @@
+{% extends "base.html "%}
+{% block mbookactive %}active{% endblock mbookactive %}
+{% block title %}Books{% endblock title %}
+{% block body %}
+<div class="container">
+    <h2 class="text-center my3">Enter Books Details of your choice </h2>
+    <br>
+    <form method="POST" class="post-form" action="/mbook">
+        {% csrf_token %}
+
+        <a href="/show" class="btn btn-link text-center">Click to View all books</a>
+        <br>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label"> Book Name</label>
+            <div class="col-sm-4">
+                {{ form.bname }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Short Description</label>
+            <div class="col-sm-4">
+                {{ form.bdesc }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Author Name</label>
+            <div class="col-sm-4">
+                {{ form.bauthor }}
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Email Address</label>
+            <div class="col-sm-4">
+                {{ form.emailid }}
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    </form>
+</div>
+
+{% endblock body %}
